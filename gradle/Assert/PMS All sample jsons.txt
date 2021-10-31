@@ -1,0 +1,110 @@
+1. Generate SMS OTP
+
+	Requested Json :
+		 {"json_type":"generate sms otp","phone":"1234567890","name":"rohit prakash"}
+
+	Response Json : success
+
+
+2. Verify SMS OTP
+
+	Requested Json : 
+		{"json_type":"verify otp","mail":"1234567890","name":"rohit prakash","otp":"123456"}
+
+	Response Json : success
+
+
+3.Generate Mail OTP 
+
+	Requested Json :
+		 {"json_type":"generate mail otp","mail":"youtEmail@gmail.com","name":"rohit prakash"}
+
+	Response Json : success
+
+
+4.Verify Mail OTP
+	
+	Requested Json : 
+		{"json_type":"verify otp","mail":"youtEmail@gmail.com","name":"rohit prakash","otp":"123456"}
+	
+	Response Json : success
+
+
+5.Create New login
+
+	Requested Json : 
+		{"json_type":"create new login","name":"rohit prakash","mail":"youtEmail@gmail.com","phone":"1234567890","password":"1a@A"}
+ 
+	Response Json : success
+
+
+6.Login
+
+	Requested Json :
+		 {"json_type":"check login","mail":"youtEmail@gmail.com","password":"1a@A"}
+
+	Response Json : [{"status":"success","name":"rohit prakash","phone":"1234567890","mail":"youtEmail@gmail.com"}]
+
+
+7.Recipient Basic Info
+
+	Requested Json : 
+		{"json_type":"basic information","mail":"youtEmail@gmail.com"}
+
+	Response Json : [{"status":"success","name":"rohit prakash","phone":"1234567890","mail":"youtEmail@gmail.com"}]
+
+
+8.Get Booked slot area name
+
+	Requested Json : 
+		{"json_type":"get area name"}
+
+	Response Json : [{"id":"1","name":"Chennai"}]
+
+
+9.Sent Booking slot time and get available slots.
+	
+	Requested Json : 
+		{"json_type":"get slot status","mail":"youtEmail@gmail.com","area_id":"1","start":"2021-6-28 23:35:00","end":"2021-6-28 12:35:00"}
+
+	Response Json : [{"slot_id":"S1","status":"No"},{"slot_id":"S2","status":"No"},{"slot_id":"S3","status":"No"},{"slot_id":"S4","status":"No"},{"slot_id":"S5","status":"No"},{"slot_id":"S6","status":"No"},{"slot_id":"S7","status":"No"},{"slot_id":"S8","status":"No"},{"slot_id":"S9","status":"No"},{"slot_id":"S10","status":"No"}]
+
+
+10.Slot Booking.
+ 
+	Requested Json :
+		 {"json_type":"book slot","area_id":"1","start":"2021-6-28 23:35:00","end":"2021-6-28 12:35:00","slot_id":"S5","mail":"youtEmail@gmail.com","reg_no":"TN00AB0123"}
+	
+	Response Json 2: success
+
+
+11.Booked slot list.
+	Requested Json :
+		 {"json_type":"booked list","mail":"youtEmail@gmail.com"}
+
+	Response Json :
+		 [{"rcd_id":"2","area_id":"1","area_name":"Chennai","slot_no":"S6","reg_no":"ah DJ DJ","st_time":"2021-06-29 06:00 PM","et_time":"2021-06-29 07:00 PM","reg_time":"2021-06-28 11:38 PM","open_btn":"no","close_btn":"no"},{"rcd_id":"3","area_id":"1","area_name":"Chennai","slot_no":"S8","reg_no":"DJ DJ DJ","st_time":"2021-06-29 06:00 PM","et_time":"2021-06-29 07:00 PM","reg_time":"2021-06-28 11:38 PM","open_btn":"no","close_btn":"no"}]
+
+
+12.History
+
+	Requested Json : 
+		{"json_type":"history","mail":"youtEmail@gmail.com"}
+
+	Response Json : [{"rcd_id":"1","area_id":"1","area_name":"Chennai","slot_no":"S5","reg_no":"TN00AB0123","st_time":"2021-06-28 11:35 PM","et_time":"2021-06-28 12:35 PM","reg_time":"2021-06-28 11:36 PM","cl_time":"2021-06-28 11:39 PM","sts":"Auto-Cancelled"}]
+
+
+13. Gate Open
+ 
+	Requested Json : 
+		{"json_type":"gate open","mail":"youtEmail@gmail.com","rcd_id":"4"}
+
+	Response Json 2: success
+
+
+14.Gate Close 
+	
+	Requested Json : 
+		{"json_type":"gate close","mail":"youtEmail@gmail.com","rcd_id":"4"}
+
+	Response Json : success
