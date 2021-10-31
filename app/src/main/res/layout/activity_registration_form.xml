@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".Registration_form">
+
+    <LinearLayout
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Sign Up"
+            />
+
+
+        <EditText
+            android:id="@+id/name"
+            android:hint="Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:hint="Phone Number"
+            android:id="@+id/phone_nos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:inputType="phone" />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:visibility="gone"
+            android:hint="Password"
+            android:id="@+id/pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:inputType="textPassword"
+            android:visibility="gone"
+            android:id="@+id/con_pwd"
+            android:hint="Confirm Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:text="submit"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

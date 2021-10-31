@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="historydata"
+            type="com.example.parkingmanagementsystem.model.History" />
+
+    </data>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Location :"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:text="@{historydata.area_name}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Location ID:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/locationid"
+                android:text="@{historydata.area_id}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Slot No. :"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:text="@{historydata.slot_no}"
+                android:id="@+id/slot_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Vehicle No:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:text="@{historydata.reg_no}"
+                android:id="@+id/vehicleno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="In Time:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:text="@{historydata.st_time}"
+                android:id="@+id/intime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Out Time:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:text="@{historydata.et_time}"
+                android:id="@+id/outtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Booked On:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:text="@{historydata.reg_time}"
+                android:id="@+id/bookedid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Cancelled On:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:text="@{historydata.cl_time}"
+                android:id="@+id/calcel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Track ID:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/rcdid"
+                android:text="@{historydata.rcd_id}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Status:"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/sts"
+                android:text="@{historydata.sts}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</layout>
